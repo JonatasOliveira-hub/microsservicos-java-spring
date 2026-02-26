@@ -1,3 +1,15 @@
 spring:
   application:
-    name: microsservicos-java-spring
+    name: microsservicos-java-spring			
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+greeting-service:
+  greeting: "Olá"
+  default-value: "Mundo"
