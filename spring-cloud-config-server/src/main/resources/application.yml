@@ -1,8 +1,14 @@
 spring:
   application:
     name: spring-cloud-config-server
-  profiles:
-    active:
-    - native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JonatasOliveira-hub/jonatas-config-server
+          search-paths: 'greeting-service*' 
+        default-label: dev
+#    active:
+#    - native
 server:
   port: 8888      
